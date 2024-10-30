@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         //
-        $comics = Comic::all();
+        $comics = config('db');
 
         return view('comics.index', compact('comics'));
     }
@@ -37,10 +38,10 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Comic $comic)
+    public function show(Comic $id)
     {
         //
-        return view('comics.show', compact('comic'));
+        return view('comics.show', compact('id'));
     }
 
     /**
