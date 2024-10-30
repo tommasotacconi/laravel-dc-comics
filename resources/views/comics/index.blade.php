@@ -18,13 +18,13 @@
                 Series: {{ $comic['series'] }}<br>
                 Scrittori:
                 <ul class="">
-                    @for ($i = 0; $i < 2; $i++)
-                    {{-- Define value to check before insertion --}}
-                    @if (isset($comic['artists'][$i]))
-                    <li>{{ $comic['artists'][$i] }}</li>
-                    @endif
-                    @endfor ($comic['writers'] as $artist)
-                  </ul>
+                  @for ($i = 0; $i < 2; $i++)
+                  {{-- Define value to check before insertion --}}
+                  @if (isset($comic['artists'][$i]))
+                  <li>{{ $comic['artists'][$i] }}</li>
+                  @endif
+                  @endfor ($comic['writers'] as $artist)
+                </ul>
                 <div class="price-wrapper">
                   {{ $comic['price'] }}<br>
                 </div>
