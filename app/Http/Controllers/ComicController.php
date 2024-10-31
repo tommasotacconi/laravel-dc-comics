@@ -38,10 +38,11 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Comic $id)
+    public function show(string $comic)
     {
         //
-        return view('comics.show', compact('id'));
+        $comic = config('db')[$comic];
+        return view('comics.show', compact('comic'));
     }
 
     /**
