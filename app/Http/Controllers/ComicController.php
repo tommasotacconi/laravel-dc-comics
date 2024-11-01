@@ -42,7 +42,7 @@ class ComicController extends Controller
         // which create a string with the array of the related creators, for example
         // all creators of type 'writers'
         foreach ($new_comic_creators as $creators_type) {
-            $new_comic_creators = explode(' ', $new_comic["$creators_type"]);
+            $new_comic_creators = explode(',', $new_comic["$creators_type"]);
             $variable_write_creators = "write_$creators_type";
             $$variable_write_creators = "[\n";
             foreach ($new_comic_creators as $creator) {
@@ -99,7 +99,8 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = config('db')[$id];
+        return view('comics.edit', compact('comic'));
     }
 
     /**

@@ -11,29 +11,32 @@
   <div class="row gy-3">
     @foreach ($comics as $id => $comic)
       <div class="col">
-        <a href="{{ route('comics.show', $id) }}">
-          <div class="card m-auto" style="width: 18rem; height: 30rem">
-            <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h1>{{ $comic['title'] }}</h1>
-                <div class="card-text">
-                  Series: {{ $comic['series'] }}<br>
-                  Scrittori:
-                  <ul class="">
-                    @for ($i = 0; $i < 2; $i++)
-                    {{-- Define value to check before insertion --}}
-                    @if (isset($comic['artists'][$i]))
-                    <li>{{ $comic['artists'][$i] }}</li>
-                    @endif
-                    @endfor ($comic['writers'] as $artist)
-                  </ul>
-                  <div class="price-wrapper">
-                    {{ $comic['price'] }}<br>
-                  </div>
-                </div>
+        <div class="card m-auto" style="width: 18rem; height: 30rem">
+          <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="{{ route('comics.show', $id) }}">
+                <h1>{{ $comic['title'] }}</h1>
+            </a>
+            <div class="card-text">
+              Series: {{ $comic['series'] }}<br>
+              Scrittori:
+              <ul class="">
+                @for ($i = 0; $i < 2; $i++)
+                {{-- Define value to check before insertion --}}
+                @if (isset($comic['artists'][$i]))
+                <li>{{ $comic['artists'][$i] }}</li>
+                @endif
+                @endfor ($comic['writers'] as $artist)
+              </ul>
+              <div class="buttons-wrapper">
+                <a href="{{ route('comics.edit', $id) }}" class="btn edit-btn btn-primary">Edit</a>
+              </div>
+              <div class="price-wrapper">
+                {{ $comic['price'] }}<br>
+              </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     @endforeach
   </div>
