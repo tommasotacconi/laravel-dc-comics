@@ -1,103 +1,114 @@
 @use '~bootstrap/scss/bootstrap' as *;
 
+/* Colors palette */
+:root {
+  --dc-color: #0096e0;
+}
+
+
 h1 {
-		font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 a{
-		text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-		padding-left: 10px;
-		list-style-type: '\2023';
+  padding-left: 10px;
+  list-style-type: '\2023';
 
-		li {
-				padding-left: 5px;
-		}
+  li {
+      padding-left: 5px;
+  }
 }
 
 // Utilities
 /* Index view */
 .card {
-		padding-bottom: 20px;
+  padding-bottom: 20px;
 
-		position: relative;
-		overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-		img {
-				height: 260px;
-				object-fit: cover;
-				object-position: top;
-		}
+  h1 {
+    color: var(--dc-color);
+  }
 
-		.card-body {
-				overflow: hidden;
-		}
+  img {
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+  }
 
-		.price-wrapper {
-				position: absolute;
-				right: 20px;
-				bottom: 10px;
-		}
+  .card-body {
+    overflow: hidden;
+  }
 
-        .edit-btn {
-            position: absolute;
-            left: 16px;
-            bottom: 10px;
-            padding: 3px 8px;
-        }
+  .price-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+  }
+
+  .edit-btn {
+    position: absolute;
+    left: 16px;
+    bottom: 10px;
+    padding: 3px 8px;
+    background-color: var(--dc-color);
+  }
 }
 
 .card h1 {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 
 /* Show view */
 #show {
-    h2 {
-        font-size: 1.1rem;
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+
+    text-align: center;
+  }
+
+  .jumbotrone {
+    height: 40vh;
+    margin: 50px 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% -200px;
+  }
+  }
+
+  .info-section {
+    h4 {
+      font-size: 1rem;
     }
 
-    h3 {
-        font-size: 1.1rem;
-
-        text-align: center;
+    p {
+      margin-bottom: 50px;
+      text-align: justify;
     }
 
-    .jumbotrone {
-        height: 40vh;
-        margin: 50px 0;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 50% -200px;
-        }
+    .authors {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
     }
 
-    .info-section {
-        h4 {
-            font-size: 1rem;
-        }
-
-        p {
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-
-        .authors {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 30px;
-        }
-
-        .wrapper-sdate-price {
-            margin: 100px 0;
-        }
+    .wrapper-sdate-price {
+      margin: 100px 0;
     }
+  }
 }
 
 
