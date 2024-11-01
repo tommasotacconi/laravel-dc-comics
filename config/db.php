@@ -212,4 +212,23 @@ return [
             "Joëlle Jones"
         ],
     ],
+    [
+        "title" => "titolo fumetto",
+        "description" => "descrizione",
+        "thumb" => "https://www.biowars.com/wp-content/uploads/2023/03/spider-man-comics-spider-man-2016-1.jpg",
+        "price" => "$9.50",
+        "series" => "serie",
+        "sale_date" => "2024-11-15",
+        "series" => "serie",
+        "type" => "tipo",
+        "artists" => [
+            "artista1",
+            "artista2",
+            "artista3",
+        ],
+        "writers" => [
+            "scrittore1",
+            "scrittore2",
+        ],
+    ],
 ];

@@ -3,7 +3,7 @@
 @section('page-title', $comic['title'])
 
 @section('main-content')
-  <div id="show" class="container-lg">
+  <div id="show" class="container-md">
     <h1 class="text-center mt-3 ">{{ $comic['title']}} </h1>
     <h2 class="text-center">{{ $comic['type'] }}</h2>
     <div class="jumbotrone">

@@ -4,7 +4,7 @@
 
 @section('main-content')
 
-<div id="index" class="container-lg mb-4">
+<div id="index" class="container-md mb-4">
   <h1 class="text-center p-3">
       Comics libraries
   </h1>
