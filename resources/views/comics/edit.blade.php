@@ -5,8 +5,9 @@
 @section('main-content')
   <div class="container-md">
     <h1 class="text-center p-3">Edit {{ $comic['title'] }}</h1>
-    <form action="{{ route('comics.store') }}" method="POST" class="row g-3">
-      @csrf
+    <form action="{{ route('comics.update', $id) }}" method="POST" class="row g-3">
+        @csrf
+        @method('PUT')
 
       <div class="col-12">
         <label for="input-title" class="form-label">Titolo</label>
@@ -53,7 +54,7 @@
         </div>
       </div>
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Crea</button>
+        <button type="submit" class="btn btn-primary">Modifica</button>
         <button type="reset" class="btn btn-warning">Cancella campi</button>
       </div>
     </form>
